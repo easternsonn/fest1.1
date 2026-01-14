@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ТАНЕЦ.ФЕСТ — Танцевальный фестиваль</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --accent: #5e29a0;
+    --dark: #bf8eec;
+    --gray: #673bac;
+    --text: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: var(--dark);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+/* ===== GLOBAL ===== */
+.container {
+    max-width: 1200px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+section {
+    padding: 90px 0;
+}
+
+h1, h2, h3 {
+    font-weight: 800;
+}
+
+h2 {
+    text-align: center;
+    font-size: clamp(26px, 4vw, 42px);
+    margin-bottom: 50px;
+}
+
+p {
+    opacity: 0.9;
+}
+
+.btn {
+    display: inline-block;
+    padding: 16px 42px;
+    background: var(--accent);
+    color: #fff;
+    border-radius: 40px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    background: #3a0880;
+}
+
+/* ===== HERO ===== */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background:
+        linear-gradient(135deg, rgba(191, 142, 236, 0.85), rgba(185, 128, 232, 0.4)),
+        url("media/logo.png") center/cover no-repeat;
+}
+
+.hero-content {
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: clamp(36px, 6vw, 72px);
+    margin-bottom: 20px;
+}
+
+.hero span {
+    color: var(--accent);
+}
+
+.hero p {
+    max-width: 700px;
+    margin: 0 auto 40px;
+    font-size: clamp(16px, 2.5vw, 22px);
+}
+
+/* ===== FACTS ===== */
+.facts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+}
+
+.fact {
+    background: var(--gray);
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.fact h3 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+/* ===== ABOUT ===== */
+.about {
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.about-text {
+    flex: 1 1 300px;
+}
+
+.about img {
+    flex: 1 1 300px;
+    max-width: 500px;
+    width: 100%;
+    border-radius: 20px;
+}
+
+/* ===== PROGRAM ===== */
+.program {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+.program-item {
+    background: var(--gray);
+    padding: 35px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.program-item:hover {
+    transform: translateY(-6px);
+}
+
+/* ===== CTA ===== */
+.cta {
+    background: linear-gradient(135deg, #8f53dd, #8f53dd);
+    padding: 70px 20px;
+    border-radius: 30px;
+    text-align: center;
+}
+
+.cta p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    padding: 40px 0;
+    background: #a757e8;
+    text-align: center;
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+/* ===== ANIMATIONS ===== */
+.animate {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 0.8s ease;
+}
+
+.animate-left {
+    transform: translateX(-40px);
+}
+
+.animate-right {
+    transform: translateX(40px);
+}
+
+.animate.show {
+    opacity: 1;
+    transform: translate(0);
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+    section {
+        padding: 70px 0;
+    }
+
+    .about {
+        text-align: center;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<header class="hero">
+    <div class="container hero-content animate">
+        <h1>ТАНЕЦ<span>.ФЕСТ 1.1</span></h1>
+        <p>Всероссийский фестиваль - конкурс хореографического искусства</p>
+        <a href="#register" class="btn">Принять участие</a>
+    </div>
+</header>
+
+<!-- FACTS -->
+<section>
+    <div class="container facts">
+        <div class="fact animate">
+            <h3>2 дня</h3>
+            <p>Фестиваля</p>
+        </div>
+        <div class="fact animate">
+            <h3>500+</h3>
+            <p>Участников</p>
+        </div>
+        <div class="fact animate">
+            <h3>20+</h3>
+            <p>Судей</p>
+        </div>
+        <div class="fact animate">
+            <h3>10 000 ₽</h3>
+            <p>Призовой фонд</p>
+        </div>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section>
+    <div class="container about">
+        <div class="about-text animate-left animate">
+            <h2>О фестивале</h2>
+            <p>
+                ТАНЕЦ.ФЕСТ — это пространство свободы, самовыражения и культуры танца.
+                Мы объединяем танцоров всех уровней и создаём атмосферу движения.
+            </p>
+        </div>
+        <img class="animate-right animate"
+             src="media/happy.jpg"
+             alt="Dance Festival">
+    </div>
+</section>
+
+<!-- PROGRAM -->
+<section>
+    <div class="container">
+        <h2 class="animate">Программа</h2>
+        <div class="program">
+            <div class="program-item animate">
+                <h3>Танцевальные баттлы</h3>
+                <p>Hip-Hop, Breaking, House</p>
+            </div>
+            <div class="program-item animate">
+                <h3>Мастер-классы</h3>
+                <p>От топовых хореографов</p>
+            </div>
+            <div class="program-item animate">
+                <h3>Шоукейсы</h3>
+                <p>Командные выступления</p>
+            </div>
+            <div class="program-item animate">
+                <h3>Afterparty</h3>
+                <p>DJ-сеты и свободный танец</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section id="register">
+    <div class="container">
+        <div class="cta animate">
+            <h2>Стань частью ТАНЕЦ.ФЕСТ</h2>
+            <p>Регистрация участников и зрителей уже открыта в нашем сообществе во ВКонтакте</p>
+            <a href="#" class="btn">Зарегистрироваться</a>
+        </div>
+    </div>
+</section>
+
+<footer>
+    © 2026 ТАНЕЦ.ФЕСТ
+</footer>
+
+<!-- ===== JS (анимации при скролле) ===== -->
+<script>
+const animatedElements = document.querySelectorAll('.animate');
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+        }
+    });
+}, {
+    threshold: 0.2
+});
+
+animatedElements.forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
